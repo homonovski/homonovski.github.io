@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python Developer Portfolio - автоматизация, боты, API и веб-решения">
+    <meta name="keywords" content="Python, FastAPI, Telegram Bot, Developer, Portfolio">
+    <meta property="og:title" content="homonovski | Python Developer">
+    <meta property="og:description" content="Создаю автоматизацию, ботов, API и веб-решения">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+    <title>homonovski | Python Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">homonovski</a>
+            <div class="nav-links">
+                <a href="#about"><span class="nav-link-text">About</span><span class="nav-link-index">01</span></a>
+                <a href="#skills"><span class="nav-link-text">Skills</span><span class="nav-link-index">02</span></a>
+                <a href="#projects"><span class="nav-link-text">Projects</span><span class="nav-link-index">03</span></a>
+                <a href="#contact"><span class="nav-link-text">Contact</span><span class="nav-link-index">04</span></a>
+            </div>
+            <div class="nav-actions">
+                <div class="music-player">
+                    <button class="music-btn" aria-label="Toggle music">
+                        <span class="music-bar"></span>
+                        <span class="music-bar"></span>
+                        <span class="music-bar"></span>
+                    </button>
+                    <div class="volume-slider">
+                        <input type="range" class="volume-range" min="0" max="1" step="0.01" value="0.5" aria-label="Volume">
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Python Developer</p>
+                    <h1 class="hero-title">
+                        Добро пожаловать<br>
+                        <span class="gradient-text">в мою среду</span><br>
+                        разработки
+                    </h1>
+                    <p class="hero-description">
+                        Создаю автоматизацию, ботов, API и веб-решения с акцентом на чистый код и плавные интерфейсы.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary glass-btn"><span>Посмотреть проекты</span></a>
+                        <a href="#contact" class="btn btn-outline glass-btn"><span>Связаться</span></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div id="threeScene"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2 class="section-title">О себе</h2>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-profile">
+                        <div class="about-avatar">
+                            <img src="Dunfb Uncanny GIF - DunFB Uncanny Uncanny cat - Descobrir e Compartilhar GIFs.gif" alt="homonovski">
+                        </div>
+                        <div class="about-name">homonovski</div>
+                        <div class="about-tags">
+                            <span>FastAPI</span>
+                            <span>Telegram Bots</span>
+                            <span>Automation</span>
+                            <span>Blender</span>
+                        </div>
+                        <div class="about-code">
+                            <span class="code-prompt">&gt;</span>
+                            <span class="code-text" id="typewriter"></span>
+                        </div>
+                        <a href="https://t.me/shop_hbot" target="_blank" class="btn btn-primary shop-btn"><span>Homonovski Market</span></a>
+                    </div>
+                    <div class="about-divider">
+                        <div class="divider-dot"></div>
+                    </div>
+                    <div class="about-body">
+                        <p>
+                            Специализируюсь на создании автоматизированных решений — от Telegram-ботов
+                            и веб-API до парсинга данных и административных панелей.
+                        </p>
+                        <p>
+                            Минимализм в коде, функциональность в дизайне. Каждый проект — продуманный
+                            продукт с приятным пользовательским взаимодействием.
+                        </p>
+                        <p>
+                            Сейчас изучаю 3D-моделирование в Blender, расширяя горизонты
+                            в визуальной части проектов.
+                        </p>
+                        <div class="about-stats-row">
+                            <div class="about-stat glass-card">
+                                <span class="about-stat-num">1.5+</span>
+                                <span class="about-stat-label">лет опыта</span>
+                            </div>
+                            <div class="about-stat glass-card">
+                                <span class="about-stat-num">20+</span>
+                                <span class="about-stat-label">проектов</span>
+                            </div>
+                            <div class="about-stat glass-card">
+                                <span class="about-stat-num">100%</span>
+                                <span class="about-stat-label">автоматизации</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-dark">
+            <div class="section-content">
+                <h2 class="section-title">Навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title">Backend</h3>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                            <li>Flask</li>
+                            <li>PostgreSQL</li>
+                            <li>SQLite</li>
+                            <li>Docker</li>
+                            <li>API integration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-title">Frontend</h3>
+                        <ul class="skill-list">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Canvas API</li>
+                            <li>CSS Animations</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-title">Tools & DevOps</h3>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>GitHub Pages</li>
+                            <li>Linux (CLI)</li>
+                            <li>VPS</li>
+                            <li>Telegram Bot API</li>
+                            <li>Telegram Userbot</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-title">Data & Automation</h3>
+                        <ul class="skill-list">
+                            <li>BeautifulSoup</li>
+                            <li>requests</li>
+                            <li>asyncio</li>
+                            <li>threading</li>
+                            <li>Google Sheets (gspread)</li>
+                            <li>CSV/TXT parsing</li>
+                            <li>dotenv</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2 class="section-title">Проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-image">
+                            <svg class="project-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Robot body -->
+                                <rect class="icon-body" x="25" y="30" width="50" height="50" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Robot head -->
+                                <rect class="icon-head" x="30" y="10" width="40" height="25" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Eyes -->
+                                <circle class="icon-eye icon-eye-left" cx="40" cy="20" r="4" fill="currentColor"/>
+                                <circle class="icon-eye icon-eye-right" cx="60" cy="20" r="4" fill="currentColor"/>
+                                <!-- Antenna -->
+                                <line class="icon-antenna" x1="50" y1="10" x2="50" y2="2" stroke="currentColor" stroke-width="2"/>
+                                <circle class="icon-antenna-dot" cx="50" cy="2" r="3" fill="currentColor"/>
+                                <!-- Arms -->
+                                <line class="icon-arm icon-arm-left" x1="25" y1="45" x2="15" y2="45" stroke="currentColor" stroke-width="2"/>
+                                <line class="icon-arm icon-arm-right" x1="75" y1="45" x2="85" y2="45" stroke="currentColor" stroke-width="2"/>
+                                <!-- Message bubbles -->
+                                <g class="icon-messages">
+                                    <path class="icon-msg icon-msg-1" d="M85 25 L95 25 L95 15 L85 15 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <path class="icon-msg icon-msg-2" d="M5 35 L15 35 L15 25 L5 25 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Telegram Бот</h3>
+                            <p class="card-description">
+                                Автоматизированный бот для обработки запросов, управления базами данных
+                                и взаимодействия с внешними API.
+                            </p>
+                            <div class="card-tags">
+                                <span>Python</span>
+                                <span>aiogram</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-image">
+                            <svg class="project-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Server box -->
+                                <rect class="icon-server icon-server-1" x="20" y="15" width="60" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect class="icon-server icon-server-2" x="20" y="40" width="60" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect class="icon-server icon-server-3" x="20" y="65" width="60" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Dots on servers -->
+                                <circle class="icon-dot icon-dot-1" cx="30" cy="25" r="3" fill="currentColor"/>
+                                <circle class="icon-dot icon-dot-2" cx="30" cy="50" r="3" fill="currentColor"/>
+                                <circle class="icon-dot icon-dot-3" cx="30" cy="75" r="3" fill="currentColor"/>
+                                <!-- Lines -->
+                                <line class="icon-line icon-line-1" x1="40" y1="25" x2="70" y2="25" stroke="currentColor" stroke-width="2" stroke-dasharray="5,3"/>
+                                <line class="icon-line icon-line-2" x1="40" y1="50" x2="70" y2="50" stroke="currentColor" stroke-width="2" stroke-dasharray="5,3"/>
+                                <line class="icon-line icon-line-3" x1="40" y1="75" x2="70" y2="75" stroke="currentColor" stroke-width="2" stroke-dasharray="5,3"/>
+                                <!-- Connection arrows -->
+                                <path class="icon-arrow" d="M50 85 L50 95 M45 90 L50 95 L55 90" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">FastAPI приложение</h3>
+                            <p class="card-description">
+                                REST API с асинхронной обработкой запросов, JWT-авторизацией и документацией.
+                            </p>
+                            <div class="card-tags">
+                                <span>FastAPI</span>
+                                <span>Python</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-image">
+                            <svg class="project-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Document/Web page -->
+                                <rect class="icon-doc" x="20" y="10" width="50" height="70" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Lines on document -->
+                                <line class="icon-doc-line" x1="28" y1="25" x2="62" y2="25" stroke="currentColor" stroke-width="1.5"/>
+                                <line class="icon-doc-line" x1="28" y1="35" x2="55" y2="35" stroke="currentColor" stroke-width="1.5"/>
+                                <line class="icon-doc-line" x1="28" y1="45" x2="58" y2="45" stroke="currentColor" stroke-width="1.5"/>
+                                <line class="icon-doc-line" x1="28" y1="55" x2="50" y2="55" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Spider/web crawler -->
+                                <g class="icon-spider">
+                                    <circle class="icon-spider-body" cx="85" cy="30" r="6" fill="currentColor"/>
+                                    <line class="icon-spider-leg" x1="79" y1="30" x2="70" y2="25" stroke="currentColor" stroke-width="1.5"/>
+                                    <line class="icon-spider-leg" x1="79" y1="32" x2="70" y2="35" stroke="currentColor" stroke-width="1.5"/>
+                                    <line class="icon-spider-leg" x1="91" y1="30" x2="95" y2="25" stroke="currentColor" stroke-width="1.5"/>
+                                    <line class="icon-spider-leg" x1="91" y1="32" x2="95" y2="35" stroke="currentColor" stroke-width="1.5"/>
+                                </g>
+                                <!-- Arrow indicating data extraction -->
+                                <path class="icon-extract" d="M70 60 L85 75 L75 75 L75 90 L65 90 L65 75 L55 75 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Парсер данных</h3>
+                            <p class="card-description">
+                                Сбор и обработка информации с веб-сайтов, экспорт в Google Sheets и форматирование.
+                            </p>
+                            <div class="card-tags">
+                                <span>BeautifulSoup</span>
+                                <span>requests</span>
+                                <span>gspread</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-image">
+                            <svg class="project-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Dashboard frame -->
+                                <rect class="icon-dashboard" x="10" y="15" width="80" height="60" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Top bar -->
+                                <rect class="icon-topbar" x="10" y="15" width="80" height="12" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Control dots -->
+                                <circle class="icon-control" cx="18" cy="21" r="2" fill="currentColor"/>
+                                <circle class="icon-control" cx="26" cy="21" r="2" fill="currentColor"/>
+                                <circle class="icon-control" cx="34" cy="21" r="2" fill="currentColor"/>
+                                <!-- Sidebar -->
+                                <rect class="icon-sidebar" x="15" y="32" width="18" height="38" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Sidebar items -->
+                                <rect class="icon-sidebar-item" x="19" y="38" width="10" height="3" rx="1" fill="currentColor"/>
+                                <rect class="icon-sidebar-item" x="19" y="46" width="10" height="3" rx="1" fill="currentColor"/>
+                                <rect class="icon-sidebar-item" x="19" y="54" width="10" height="3" rx="1" fill="currentColor"/>
+                                <!-- Charts area -->
+                                <g class="icon-charts">
+                                    <!-- Bar chart -->
+                                    <rect class="icon-bar icon-bar-1" x="40" y="55" width="8" height="15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect class="icon-bar icon-bar-2" x="52" y="45" width="8" height="25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect class="icon-bar icon-bar-3" x="64" y="50" width="8" height="20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect class="icon-bar icon-bar-4" x="76" y="40" width="8" height="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                </g>
+                                <!-- Graph line -->
+                                <polyline class="icon-graph" points="40,50 52,40 64,45 76,35" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Settings gear -->
+                                <g class="icon-gear" transform="translate(80, 82)">
+                                    <circle cx="0" cy="0" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="0" cy="0" r="2" fill="currentColor"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Админ-панель</h3>
+                            <p class="card-description">
+                                Инструмент для управления контентом, модерации и мониторинга системы.
+                            </p>
+                            <div class="card-tags">
+                                <span>Flask</span>
+                                <span>Python</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-dark">
+            <div class="section-content contact-content">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p class="contact-text">
+                            Готов обсудить проекты, поделиться идеями или просто пообщаться о разработке.
+                        </p>
+                        <a href="https://t.me/homonovski" class="btn btn-primary btn-large">
+                            <span>Написать в Telegram</span>
+                        </a>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" class="form-input" placeholder="Ваше имя" required>
+                        <input type="email" class="form-input" placeholder="Email для ответа" required>
+                        <textarea class="form-input form-textarea" placeholder="Сообщение..." rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary"><span>Отправить</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2026 homonovski. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="https://github.com/homonovski" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="pop quiz   Egobreak.m4a" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
